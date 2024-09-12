@@ -1,17 +1,12 @@
-$bgColor: #24292e;
+$bgColor: #0000FF;
 $text: #fff;
 
-@font-face {
-  font-family: 'Comic';
-  src: url('../fonts/comic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 body {
-  padding: 1rem;
-  margin: 0;
-  font-family: Comic, sans-serif;
+  //padding: 1rem;
+  //margin: 0;
+  font-family: 'Roboto', sans-serif;
   background-color: $bgColor;
-  color: $text;
+  //color: $text;
 }

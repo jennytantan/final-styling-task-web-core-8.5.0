@@ -7,10 +7,101 @@
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <title>CPS</title>
   </head>
+
   <body>
-    <img src="./img/webpack.svg" alt="Webpack Logo" width="200px" />
-    <h3>Welcome to Webpack 5 starter </h3>
+    <div class="mobile-menu">
+      <div class="mobile-menu__top">
+          <div class="header">
+              <button class="close-btn"><img src="./img/button-close.svg" alt="close"></button>
+              <div class="logo">
+                  <img src="./img/cps-logo.svg" alt="CPS Logo">
+              </div>
+              <button class="search-btn"><img src="./img/search.svg" alt="search"></button>
+          </div>
+          <div class="menu list">
+              <div class="menu-item">Equipment Repair</div>
+              <div class="menu-item">Services</div>
+              <div class="menu-item">For Corporate Clients</div>
+              <div class="menu-item">For Equipment Sellers</div>
+              <div class="menu-item">For Partners</div>
+              <div class="menu-item">For Manufacturers</div>
+              <div class="menu-item">Our Service Centers</div>
+              <div class="menu-item">Contacts</div>
+          </div>
+      </div>    
+      <div class="mobile-menu__footer">
+          <div class="contact-icons">
+              <div class="contact-icon"><img src="./img/button-call.svg" alt="call"></div>
+              <div class="contact-icon"><img src="./img/button-chat.svg" alt="chat"></div>
+              <div class="contact-icon"><img src="./img/button-profile.svg" alt="profile"></div>
+          </div>
+          <div class="email">mail@cps.com</div>
+          <div class="phone">8 800 890 8900</div>
+          <div class="language-selector">
+              <span class="language">ru</span>
+              <span class="language active">en</span>
+              <span class="language active">ch</span>
+          </div>
+      </div>
+  </div>
+    <div class="site-nav">
+      <div class="site-nav__left">
+          <img class="site-nav__menu-button" src="./img/button-side-menu.svg" alt="Menu Button">
+          <div class="site-nav__divider--mobile-hide">
+              <img src="./img/divider.svg" alt="Divider">
+          </div>
+          <img class="site-nav__logo" src="./img/logo.svg" alt="Logo">
+          <div class="site-nav__divider--small-screen-hide">
+              <img src="./img/divider.svg" alt="Divider">
+          </div>
+      </div>
+      <div class="site-nav__right-fixed">
+          <img class="site-nav__button--hidden" src="./img/button-call.svg" alt="Call Button">
+          <img class="site-nav__button--hidden" src="./img/button-chat.svg" alt="Chat Button">
+          <img class="site-nav__button--hidden" src="./img/button-profile.svg" alt="Profile Button">
+          <div class="site-nav__divider">
+              <img src="./img/divider.svg" alt="Divider">
+          </div>
+          <img class="site-nav__button" src="./img/button-repair.svg" alt="Repair Button">
+          <img class="site-nav__button" src="./img/button-check-status.svg" alt="Check Status Button">
+      </div>
+  </div>
+
+  <div class="header-text">
+      <img class="header-text__highlight" src="./img/header-highlight.svg" alt="Header Highlight">
+      <h1 class="header-text__title">Services</h1>
+      <div class="header-text__desktop-button">
+          <a class="header-text__link" href="#request">Submit a Request</a>
+          <img class="header-text__button" src="./img/button-repair.svg" alt="Repair Button">
+          <a class="header-text__link" href="#status">Repair Status</a>
+          <img class="header-text__button" src="./img/button-check-status.svg" alt="Check Status Button">
+      </div>
+  </div>
+
+  <div class="secondary-nav">
+     <img class="secondary-nav__button" src="./img/slide-button1.svg" alt="Slide Button 1"> 
+     <img class="secondary-nav__button" src="./img/slide-button2.svg" alt="Slide Button 2"> 
+     <img class="secondary-nav__button" src="./img/slide-button3.svg" alt="Slide Button 3"> 
+     <img class="secondary-nav__button" src="./img/slide-button4.svg" alt="Slide Button 4"> 
+     <img class="secondary-nav__button" src="./img/slide-button5.svg" alt="Slide Button 5">
+     <img class="secondary-nav__button" src="./img/slide-button6.svg" alt="Slide Button 6">
+  </div>
+
+  <section class="main-section">
+      <div class="main-section__main-text">
+          <p>We are an authorized service center for Dell equipment repair. Only with us can you repair your Dell laptop with the official manufacturer's warranty.</p>
+          <p>We have been operating successfully since 1992 and have earned a reputation as a reliable partner.</p>
+          <p>We take pride in the fact that people come to us based on recommendations and, in turn, recommend us to their family and friends.</p>
+          <div class="main-section__read-more-button">
+              <img src="./img/button-read-more.svg" alt="Read More">
+          </div>
+      </div>
+
+      <div class="main-section__main-image">
+          <img src="./img/company-logo-building.svg" alt="Company Logo on Building">
+      </div>
+  </section>
   </body>
 </html>
