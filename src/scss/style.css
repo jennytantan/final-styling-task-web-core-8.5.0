@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Roboto:ital,wght@0,400;0,500;1,700&display=swap");
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100vw; /* Ensure it stretches to full viewport width */
+  overflow-x: hidden;
+  font-family: "Roboto", sans-serif;
+  background-color: #F8F8F8;
+  color: #1B1C21;
+}
+
+/* mobile styles */
+.header-text__desktop-button {
+  display: none;
+}
+
+.site-nav__divider--mobile-hide {
+  display: none;
+}
+.site-nav__divider--small-screen-hide {
+  display: none;
+}
+.site-nav__button--hidden {
+  display: none;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: -360px; /* Start off-screen */
+  height: 100vh;
+  min-width: 320px;
+  max-width: 360px;
+  width: 100%;
+  background-color: #FFFFFF;
+  box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2);
+  transition: left 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.mobile-menu.active {
+  left: 0; /* Slide in when active */
+}
+
+.site-nav {
+  box-sizing: border-box; /* Include padding and borders in the element's width */
+  display: flex;
+  justify-content: space-between;
+  overflow-x: hidden; /* Hides any horizontal overflow */
+  width: 100vw; /* Full width of its container */
+  height: 88px;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #D9FFF5;
+}
+.site-nav img {
+  width: auto;
+}
+.site-nav__left {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around; /* or space-around, space-evenly */
+  align-items: center; /* Align items vertically in the center (optional) */
+  padding: 10px; /* Optional padding for the container */
+}
+.site-nav__left img {
+  padding: 10px 7px;
+}
+.site-nav__right-fixed {
+  box-sizing: border-box;
+  display: flex;
+  /*justify-content: space-around; */
+  align-items: center; /* Align items vertically in the center (optional) */
+  padding: 10px; /* Optional padding for the container */
+}
+.site-nav__right-fixed img {
+  padding: 10px 7px;
+}
+.site-nav__divider {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around; /* or space-around, space-evenly */
+  align-items: center; /* Align items vertically in the center (optional) */
+  padding: 10px; /* Optional padding for the container */
+}
+
+.header-text {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.header-text h1 {
+  padding: 15px;
+}
+
+.secondary-nav {
+  display: flex;
+  flex-direction: row;
+  overflow-x: hidden;
+  width: 100vw;
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+.secondary-nav img {
+  flex-shrink: 0; /* Prevent images from shrinking to fit the container */
+  width: auto; /* Images retain their natural width */
+  height: 100%; /* Set the desired height for the images */
+  -o-object-fit: cover;
+     object-fit: cover; /* Ensure the images cover the set height without distortion */
+  display: block; /* Remove any gap below the images */
+}
+
+.main-section__main-text {
+  box-sizing: border-box; /* Include padding and borders in the element's width */
+  width: 100vw;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.main-section__read-more-button {
+  padding: 10px;
+}
+.main-section__main-image {
+  width: 100%;
+  overflow: hidden;
+}
+.main-section__main-image img {
+  width: 100%; /* Make the image take up 100% of the container's width */
+  height: auto; /* Maintain the image's aspect ratio */
+  display: block; /* Remove the bottom gap that may appear with inline images */
+}
+
+p {
+  margin: 0;
+  margin-bottom: 20px;
+  line-height: 18px;
+}
+
+/* tablet styles */
+@media screen and (min-width: 768px) {
+  .header-text__desktop-button {
+    display: none;
+  }
+  .site-nav__divider--small-screen-hide {
+    display: none;
+  }
+  .site-nav__divider--mobile-hide {
+    display: block;
+  }
+  .site-nav__button--hidden {
+    display: block;
+  }
+  section {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+}
+/* desktop styles */
+@media screen and (min-width: 1120px) {
+  html, body {
+    max-width: 1600px;
+    margin: 0 auto; /* Center the container */
+    width: 100%; /* Make sure it takes the full width of the viewport until it reaches 1600px */
+  }
+  .header-text {
+    display: flex;
+    flex-direction: row;
+    overflow-x: hidden;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .header-text__desktop-button {
+    display: block;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+  }
+  .header-text__desktop-button img {
+    padding-right: 10px;
+  }
+  h1 {
+    margin-right: auto;
+  }
+  div a {
+    padding-right: 10px;
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit the text color from the parent element */
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .site-nav__button site-nav__button--hidden {
+    display: none;
+  }
+  .site-nav {
+    display: none;
+  }
+}/*# sourceMappingURL=style.css.map */

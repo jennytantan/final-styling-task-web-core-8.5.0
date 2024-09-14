@@ -2,18 +2,17 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const GoogleFontsPlugin = require("google-fonts-webpack-plugin");
+// const GoogleFontsPlugin = require("google-fonts-webpack-plugin");
 
 module.exports = {
   // Entry file
-  entry: [
-    './src/js/index.js'
+  entry: ['./src/js/index.js',
   ],
-
+     
   // Output file
   output: {
-    filename: './js/bundle.js',
-    path: path.resolve(__dirname, 'dist') // Add output path
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist'), // Add output path
   },
 
   // Source maps for easier debugging
@@ -21,6 +20,12 @@ module.exports = {
 
   module: {
     rules: [
+
+      {
+        test: /swiper\.esm\.js/,
+        sideEffects: false
+      }, //tree shaking
+      
       // Transpile js with babel
       {
         test: /\.js$/,

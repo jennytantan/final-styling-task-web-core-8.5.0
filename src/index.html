@@ -11,44 +11,95 @@
   </head>
 
   <body>
-    <div class="mobile-menu">
-      <div class="mobile-menu__top">
-          <div class="header">
-              <button class="close-btn"><img src="./img/button-close.svg" alt="close"></button>
-              <div class="logo">
-                  <img src="./img/cps-logo.svg" alt="CPS Logo">
-              </div>
-              <button class="search-btn"><img src="./img/search.svg" alt="search"></button>
+    <!--desktop menu visible on desktops with a minimum width: 1120px-->
+    <aside class="desktop-menu">
+      <div class="desktop-menu__header-top">
+        <header class="desktop-menu__header">
+          <div class="desktop-menu__header-left">
+            <img src="./img/cps-logo.svg" alt="CPS Logo">
           </div>
-          <div class="menu list">
-              <div class="menu-item">Equipment Repair</div>
-              <div class="menu-item">Services</div>
-              <div class="menu-item">For Corporate Clients</div>
-              <div class="menu-item">For Equipment Sellers</div>
-              <div class="menu-item">For Partners</div>
-              <div class="menu-item">For Manufacturers</div>
-              <div class="menu-item">Our Service Centers</div>
-              <div class="menu-item">Contacts</div>
+          <div class="desktop-menu__header-right">
+            <img src="./img/search.svg" alt="search">
           </div>
-      </div>    
-      <div class="mobile-menu__footer">
-          <div class="contact-icons">
-              <div class="contact-icon"><img src="./img/button-call.svg" alt="call"></div>
-              <div class="contact-icon"><img src="./img/button-chat.svg" alt="chat"></div>
-              <div class="contact-icon"><img src="./img/button-profile.svg" alt="profile"></div>
-          </div>
-          <div class="email">mail@cps.com</div>
-          <div class="phone">8 800 890 8900</div>
-          <div class="language-selector">
-              <span class="language">ru</span>
-              <span class="language active">en</span>
-              <span class="language active">ch</span>
-          </div>
+        </header>
+        <nav class="desktop-menu__nav">
+          <div class="menu__item">Equipment Repair</div>
+          <div class="menu__item">Services</div>
+          <div class="menu__item">For Corporate Clients</div>
+          <div class="menu__item">For Equipment Sellers</div>
+          <div class="menu__item">For Partners</div>
+          <div class="menu__item">For Manufacturers</div>
+          <div class="menu__item">Our Service Centers</div>
+          <div class="menu__item">Contacts</div>
+        </nav>
       </div>
-  </div>
+      <div class="menu__footer">
+        <div class="menu__row">
+          <button class="menu__row-icon"><img src="./img/button-call.svg" alt="call"></button>
+          <button class="menu__row-icon"><img src="./img/button-chat.svg" alt="chat"></button>
+          <button class="menu__row-icon"><img src="./img/button-profile.svg" alt="profile"></button>
+        </div>
+        <div class="menu__contacts">
+          <a class="menu__contacts-mailto">mail@cps.com</a>
+          <div class="menu__contacts-phone">8 800 890 8900</div>
+        </div>
+        <div class="menu__language-selector">
+          <button class="menu__language">ru</button>
+          <button class="menu__language mobile-menu__language--active">en</button>
+          <button class="menu__language mobile-menu__language--active">ch</button>
+        </div>
+      </div>
+    </aside>
+
+<!--mobile menu visible on mobile with a maximum width: 1119px-->
+    <aside class="mobile-menu">
+      <div class="mobile-menu__top">
+        <header class="mobile-menu__header">
+          <div class="mobile-menu__header-left">
+            <button class="mobile-menu__close-btn"><img src="./img/button-close.svg" alt="close"></button>
+            <div class="mobile-menu__logo">
+            <img src="./img/cps-logo.svg" alt="CPS Logo">
+            </div>
+          </div>
+          <div class="mobile-menu__header-right">
+            <button class="mobile-menu__search-btn"><img src="./img/search.svg" alt="search"></button>
+          </div>
+        </header>
+        <nav class="mobile-menu__nav">
+          <div class="mobile-menu__list">
+            <div class="menu__item">Equipment Repair</div>
+            <div class="menu__item">Services</div>
+            <div class="menu__item">For Corporate Clients</div>
+            <div class="menu__item">For Equipment Sellers</div>
+            <div class="menu__item">For Partners</div>
+            <div class="menu__item">For Manufacturers</div>
+            <div class="menu__item">Our Service Centers</div>
+            <div class="menu__item">Contacts</div>
+          </div>
+        </nav>
+      </div> 
+      <div class="menu__footer">
+        <div class="menu__row">
+          <button class="menu__row-icon"><img src="./img/button-call.svg" alt="call"></button>
+          <button class="menu__row-icon"><img src="./img/button-chat.svg" alt="chat"></button>
+          <button class="menu__row-icon"><img src="./img/button-profile.svg" alt="profile"></button>
+        </div>
+        <div class="menu__contacts">
+          <a class="menu__contacts-mailto">mail@cps.com</a>
+          <div class="menu__contacts-phone">8 800 890 8900</div>
+        </div>
+        <div class="menu__language-selector">
+          <button class="menu__language">ru</button>
+          <button class="menu__language mobile-menu__language--active">en</button>
+          <button class="menu__language mobile-menu__language--active">ch</button>
+        </div>
+      </div>
+  </aside>
+  
+  <div class="main-content">
     <div class="site-nav">
       <div class="site-nav__left">
-          <img class="site-nav__menu-button" src="./img/button-side-menu.svg" alt="Menu Button">
+          <img id="btn" class="site-nav__menu-button" src="./img/button-side-menu.svg" alt="Menu Button">
           <div class="site-nav__divider--mobile-hide">
               <img src="./img/divider.svg" alt="Divider">
           </div>
@@ -103,5 +154,52 @@
           <img src="./img/company-logo-building.svg" alt="Company Logo on Building">
       </div>
   </section>
+
+  <header class="header-brands">
+    <div class="header-brands__text">repair of equipment from various brands</div>
+  </header>
+  
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide brands-swiper__slide"><img src="./img/button1.svg" alt="Brand 1"></div>
+      <div class="swiper-slide brands-swiper__slide"><img src="./img/button2.svg" alt="Brand 2"></div>
+      <div class="swiper-slide brands-swiper__slide"><img src="./img/button3.svg" alt="Brand 3"></div>
+      <div class="swiper-slide brands-swiper__slide"><img src="./img/button4.svg" alt="Brand 4"></div>
+      <div class="swiper-slide brands-swiper__slide"><img src="./img/button5.svg" alt="Brand 5"></div>
+      <div class="swiper-slide brands-swiper__slide"><img src="./img/button6.svg" alt="Brand 6"></div>
+      <div class="swiper-slide brands-swiper__slide"><img src="./img/button7.svg" alt="Brand 7"></div>
+      <div class="swiper-slide brands-swiper__slide"><img src="./img/button8.svg" alt="Brand 8"></div>
+      <div class="swiper-slide brands-swiper__slide"><img src="./img/button9.svg" alt="Brand 9"></div>
+      <div class="swiper-slide brands-swiper__slide"><img src="./img/button10.svg" alt="Brand 10"></div>
+      <div class="swiper-slide brands-swiper__slide"><img src="./img/button11.svg" alt="Brand 11"></div>
+      <!-- ... other slides ... -->
+    </div>
+    <div class="swiper-pagination brands-swiper__pagination"></div>
+  </div>
+  
+  <div class="repair-brands">
+    <div class="repair-brands__wrapper">
+      <div class="repair-brands__selector"><img src="./img/button1.svg" alt="Brand 1"></div>
+      <div class="repair-brands__selector"><img src="./img/button2.svg" alt="Brand 2"></div>
+      <div class="repair-brands__selector"><img src="./img/button3.svg" alt="Brand 3"></div>
+      <div class="repair-brands__selector"><img src="./img/button4.svg" alt="Brand 4"></div>
+      <div class="repair-brands__selector"><img src="./img/button5.svg" alt="Brand 5"></div>
+      <div class="repair-brands__selector"><img src="./img/button6.svg" alt="Brand 6"></div>
+      <div class="repair-brands__selector"><img src="./img/button7.svg" alt="Brand 7"></div>
+      <div class="repair-brands__selector"><img src="./img/button8.svg" alt="Brand 8"></div>
+      <div class="repair-brands__selector"><img src="./img/button9.svg" alt="Brand 9"></div>
+      <div class="repair-brands__selector"><img src="./img/button10.svg" alt="Brand 10"></div>
+      <div class="repair-brands__selector"><img src="./img/button11.svg" alt="Brand 11"></div>
+      <!-- ... other brand selectors ... -->
+    </div>
+    <div class="repair-brands__expander" id="expanderButton" data-expanded="false">
+      <div class="repair-brands__expander-icon"><img src="./img/expand_show_all.svg" alt="Expand icon"/></div>
+      <div class="repair-brands__expander-text">Show All</div>
+    </div>
+  </div>
+  </div>
+
+  <script src="../dist/js/bundle.js"></script>
+
   </body>
 </html>
