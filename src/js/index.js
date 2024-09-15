@@ -1,10 +1,10 @@
-import { initMobileMenu } from './mobileMenu';
+import { initMobileMenus } from './mobileMenu';
 import { initSwiper } from './swiper';
 import { initBrandSelectors } from './brandSelectors';
 import '../scss/style.scss';
 
 document.addEventListener('DOMContentLoaded', () => {
-  initMobileMenu();
+  initMobileMenus();
   initSwiper();
   initBrandSelectors();
 });

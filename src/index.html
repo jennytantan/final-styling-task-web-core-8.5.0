@@ -11,48 +11,9 @@
   </head>
 
   <body>
-    <!--desktop menu visible on desktops with a minimum width: 1120px-->
-    <aside class="desktop-menu">
-      <div class="desktop-menu__header-top">
-        <header class="desktop-menu__header">
-          <div class="desktop-menu__header-left">
-            <img src="./img/cps-logo.svg" alt="CPS Logo">
-          </div>
-          <div class="desktop-menu__header-right">
-            <img src="./img/search.svg" alt="search">
-          </div>
-        </header>
-        <nav class="desktop-menu__nav">
-          <div class="menu__item">Equipment Repair</div>
-          <div class="menu__item">Services</div>
-          <div class="menu__item">For Corporate Clients</div>
-          <div class="menu__item">For Equipment Sellers</div>
-          <div class="menu__item">For Partners</div>
-          <div class="menu__item">For Manufacturers</div>
-          <div class="menu__item">Our Service Centers</div>
-          <div class="menu__item">Contacts</div>
-        </nav>
-      </div>
-      <div class="menu__footer">
-        <div class="menu__row">
-          <button class="menu__row-icon"><img src="./img/button-call.svg" alt="call"></button>
-          <button class="menu__row-icon"><img src="./img/button-chat.svg" alt="chat"></button>
-          <button class="menu__row-icon"><img src="./img/button-profile.svg" alt="profile"></button>
-        </div>
-        <div class="menu__contacts">
-          <a class="menu__contacts-mailto">mail@cps.com</a>
-          <div class="menu__contacts-phone">8 800 890 8900</div>
-        </div>
-        <div class="menu__language-selector">
-          <button class="menu__language">ru</button>
-          <button class="menu__language mobile-menu__language--active">en</button>
-          <button class="menu__language mobile-menu__language--active">ch</button>
-        </div>
-      </div>
-    </aside>
-
+   
 <!--mobile menu visible on mobile with a maximum width: 1119px-->
-    <aside class="mobile-menu">
+    <aside class="mobile-menu mobile-menu-1">
       <div class="mobile-menu__top">
         <header class="mobile-menu__header">
           <div class="mobile-menu__header-left">
@@ -95,11 +56,92 @@
         </div>
       </div>
   </aside>
-  
+
+  <!--top right menu for Submit A Request button-->
+  <aside class="mobile-menu-2">
+    <div class="feedback__header-wrapper">
+    <button class="mobile-menu__close-btn feedback__close-btn"><img src="./img/button-close.svg"></button>
+      <div class="feedback__header">
+        <h2>Feedback</h2>
+      </div>
+    </div>
+      <form class="feedback__form">
+        <input placeholder="Name">
+        <input placeholder="Phone">
+        <input placeholder="Email">
+        <textarea cols="30" rows="7" placeholder="Message"></textarea>
+      </form>
+      <div class="feedback__terms">
+        <p>By clicking "submit", you consent to the processing of personal data and agree with our privacy policy.</p>
+      </div>
+      <div class="feedback__button">
+        <button class="feedback__button-btn"><img src="./img/send.svg"></button>
+      </div>
+   
+</aside>
+
+<!--top right menu for Repair status button-->
+<aside class="mobile-menu-3">
+  <button class="mobile-menu__close-btn feedback__close-btn"><img src="./img/button-close.svg"></button>
+  <div class="feedback__header">
+    <h2>Order Call</h2>
+  </div>
+  <form class="feedback__form">
+    <input placeholder="Phone">
+  </form>
+  <div class="feedback__terms">
+    <p>By clicking "submit", you consent to the processing of personal data and agree with our privacy policy.</p>
+  </div>
+  <div class="feedback__button">
+    <button class="feedback__button-btn"><img src="./img/send.svg"></button>
+  </div>
+</aside>
+
+<div class="main-content__grid-container">
+   <!--desktop menu visible on desktops with a minimum width: 1120px-->
+   <aside class="desktop-menu">
+    <div class="desktop-menu__header-top">
+      <header class="desktop-menu__header">
+        <div class="desktop-menu__header-left">
+          <img src="./img/cps-logo.svg" alt="CPS Logo">
+        </div>
+        <div class="desktop-menu__header-right">
+          <img src="./img/search.svg" alt="search">
+        </div>
+      </header>
+      <nav class="desktop-menu__nav">
+        <div class="menu__item">Equipment Repair</div>
+        <div class="menu__item">Services</div>
+        <div class="menu__item">For Corporate Clients</div>
+        <div class="menu__item">For Equipment Sellers</div>
+        <div class="menu__item">For Partners</div>
+        <div class="menu__item">For Manufacturers</div>
+        <div class="menu__item">Our Service Centers</div>
+        <div class="menu__item">Contacts</div>
+      </nav>
+    </div>
+    <div class="menu__footer">
+      <div class="menu__row">
+        <button class="menu__row-icon"><img src="./img/button-call.svg" alt="call"></button>
+        <button class="menu__row-icon"><img src="./img/button-chat.svg" alt="chat"></button>
+        <button class="menu__row-icon"><img src="./img/button-profile.svg" alt="profile"></button>
+      </div>
+      <div class="menu__contacts">
+        <a class="menu__contacts-mailto">mail@cps.com</a>
+        <div class="menu__contacts-phone">8 800 890 8900</div>
+      </div>
+      <div class="menu__language-selector">
+        <button class="menu__language">ru</button>
+        <button class="menu__language mobile-menu__language--active">en</button>
+        <button class="menu__language mobile-menu__language--active">ch</button>
+      </div>
+    </div>
+  </aside>
+
   <div class="main-content">
     <div class="site-nav">
       <div class="site-nav__left">
-          <img id="btn" class="site-nav__menu-button" src="./img/button-side-menu.svg" alt="Menu Button">
+          <img id="btn1" class="site-nav__menu-button" src="./img/button-side-menu.svg" alt="Menu Button">
           <div class="site-nav__divider--mobile-hide">
               <img src="./img/divider.svg" alt="Divider">
           </div>
@@ -115,8 +157,8 @@
           <div class="site-nav__divider">
               <img src="./img/divider.svg" alt="Divider">
           </div>
-          <img class="site-nav__button" src="./img/button-repair.svg" alt="Repair Button">
-          <img class="site-nav__button" src="./img/button-check-status.svg" alt="Check Status Button">
+          <img id="btn2" class="site-nav__button" src="./img/button-repair.svg">
+          <img id="btn3" class="site-nav__button" src="./img/button-check-status.svg">
       </div>
   </div>
 
@@ -124,20 +166,26 @@
       <img class="header-text__highlight" src="./img/header-highlight.svg" alt="Header Highlight">
       <h1 class="header-text__title">Services</h1>
       <div class="header-text__desktop-button">
-          <a class="header-text__link" href="#request">Submit a Request</a>
+        <div id="btn4">
+          <a href="#request">Submit a Request</a>
           <img class="header-text__button" src="./img/button-repair.svg" alt="Repair Button">
-          <a class="header-text__link" href="#status">Repair Status</a>
+        </div>
+        <div id="btn5">
+          <a href="#status">Repair Status</a>
           <img class="header-text__button" src="./img/button-check-status.svg" alt="Check Status Button">
+        </div>
       </div>
   </div>
 
   <div class="secondary-nav">
-     <img class="secondary-nav__button" src="./img/slide-button1.svg" alt="Slide Button 1"> 
-     <img class="secondary-nav__button" src="./img/slide-button2.svg" alt="Slide Button 2"> 
-     <img class="secondary-nav__button" src="./img/slide-button3.svg" alt="Slide Button 3"> 
-     <img class="secondary-nav__button" src="./img/slide-button4.svg" alt="Slide Button 4"> 
-     <img class="secondary-nav__button" src="./img/slide-button5.svg" alt="Slide Button 5">
-     <img class="secondary-nav__button" src="./img/slide-button6.svg" alt="Slide Button 6">
+    <ul class="secondary-nav__wrapper">
+     <li><a class="secondary-nav__button" href="#">Repairable Devices</a></li> 
+     <li><a class="secondary-nav__button" href="#">Brands We Repair</a></li> 
+     <li><a class="secondary-nav__button" href="#">Additional Services</a></li> 
+     <li><a class="secondary-nav__button" href="#">Service Prices</a></li> 
+     <li><a class="secondary-nav__button" href="#">Service Center Locations</a></li> 
+     <li><a class="secondary-nav__button" href="#">Special Prices</a></li> 
+    </ul>
   </div>
 
   <section class="main-section">
@@ -197,8 +245,90 @@
       <div class="repair-brands__expander-text">Show All</div>
     </div>
   </div>
+
+  <header class="header-brands categories">
+    <div class="header-brands__text">repair of equipment from various brands</div>
+  </header>
+  
+  <div class="swiper swiper-categories mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide brands-swiper__slide"><img src="./img/cat1.svg" alt="repair category 1"></div>
+      <div class="swiper-slide brands-swiper__slide"><img src="./img/cat2.svg" alt="repair category 2"></div>
+      <div class="swiper-slide brands-swiper__slide"><img src="./img/cat3.svg" alt="repair category 3"></div>
+      <div class="swiper-slide brands-swiper__slide"><img src="./img/cat1.svg" alt="repair category 4"></div>
+      <div class="swiper-slide brands-swiper__slide"><img src="./img/cat2.svg" alt="repair category 5"></div>
+      <div class="swiper-slide brands-swiper__slide"><img src="./img/cat3.svg" alt="repair category 6"></div>
+      <div class="swiper-slide brands-swiper__slide"><img src="./img/cat1.svg" alt="repair category 7"></div>
+      <div class="swiper-slide brands-swiper__slide"><img src="./img/cat2.svg" alt="repair category 8"></div>
+      <div class="swiper-slide brands-swiper__slide"><img src="./img/cat3.svg" alt="repair category 9"></div>
+      <!-- ... other slides ... -->
+    </div>
+    <div class="swiper-pagination brands-swiper__pagination"></div>
   </div>
 
+  <div class="repair-brands">
+    <div class="repair-brands__wrapper">
+      <div class="repair-brands__selector"><img src="./img/cat1.svg" alt="Brand 1"></div>
+      <div class="repair-brands__selector"><img src="./img/cat2.svg" alt="Brand 2"></div>
+      <div class="repair-brands__selector"><img src="./img/cat3.svg" alt="Brand 3"></div>
+      <div class="repair-brands__selector"><img src="./img/cat1.svg" alt="Brand 4"></div>
+      <div class="repair-brands__selector"><img src="./img/cat2.svg" alt="Brand 5"></div>
+      <div class="repair-brands__selector"><img src="./img/cat3.svg" alt="Brand 6"></div>
+      <div class="repair-brands__selector"><img src="./img/cat1.svg" alt="Brand 7"></div>
+      <div class="repair-brands__selector"><img src="./img/cat2.svg" alt="Brand 8"></div>
+      <!-- ... other brand selectors ... -->
+    </div>
+    <div class="repair-brands__expander" id="expanderButton" data-expanded="false">
+      <div class="repair-brands__expander-icon"><img src="./img/expand_show_all.svg" alt="Expand icon"/></div>
+      <div class="repair-brands__expander-text">Show All</div>
+    </div>
+  </div>
+
+  <div class="prices-container">
+  <header class="header-brands prices">
+    <div class="header-brands__text">service prices</div>
+  </header>
+  <div class="swiper swiper-categories mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide brands-swiper__slide"><img src="./img/prices.svg" alt="price 1"></div>
+      <div class="swiper-slide brands-swiper__slide"><img src="./img/prices.svg" alt="price 2"></div>
+      <div class="swiper-slide brands-swiper__slide"><img src="./img/prices.svg" alt="price 3"></div>
+      <div class="swiper-slide brands-swiper__slide"><img src="./img/prices.svg" alt="price 4"></div>
+      <div class="swiper-slide brands-swiper__slide"><img src="./img/prices.svg" alt="price 5"></div>
+      <!-- ... other slides ... -->
+    </div>
+    <div class="swiper-pagination brands-swiper__pagination"></div>
+  </div>
+  <div class="prices__description">
+    <p class="prices__description-text">
+      All prices are inclusive of VAT. Repair cost is stated for a single service. For a commercial offer on ongoing maintenance, please submit a request.
+    </p>
+    <button class="prices__description-button">
+      <p class="prices__description-button-text">
+        Get a Commercial Offer or Request a Commercial Proposal
+      </p>
+      <img class="prices__description-button-img" src="./img/arrow.svg" alt="">
+    </button>
+  </div>
+</div>
+
+<footer class="page-footer">
+  <p>
+    <span>
+      © 2019 CPS
+    </span>
+    Developed by the Apesong
+  </p>
+  <p>
+    Privacy Policy
+  </p>
+  <p>
+    The information posted on this page does not constitute a public offer.
+  </p>
+</footer>
+
+  </div>
+</div>
   <script src="../dist/js/bundle.js"></script>
 
   </body>
