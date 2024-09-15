@@ -50,7 +50,7 @@ html, body {
   justify-content: space-between;
   overflow-y: auto;
   transition: transform 0.3s ease-in-out;
-  z-index: 1;
+  z-index: 10;
 }
 .mobile-menu__header {
   display: flex;
@@ -417,6 +417,13 @@ p {
   transition: opacity 0.3s ease;
 }
 
+/* large mobile styles */
+@media screen and (min-width: 400px)
+{
+  .mobile-menu {
+    width: 350px;
+  }
+}
 
 /* Mobile screens */
 @media (max-width: 767px) {
@@ -427,41 +434,9 @@ p {
 
 /* Tablet screens */
 @media (min-width: 768px) {
-    .swiper {
-        display: none;
-    }
-    .header-brands {
-        border-top: 1px solid #D9FFF5;
-        padding: 1rem 1.5rem;
-        background: linear-gradient(45deg, #F8F8F8, #FFFFFF)
-      }
+  .swiper.swiper-initialized {
+    display: none;
   }
-
-  /* Desktop screens */
-  @media (min-width: 1120px) {
-    .swiper {
-        display: none;
-    }
-    .header-brands {
-        border-top: 1px solid #D9FFF5;
-        padding: 1rem 1.5rem;
-        background: linear-gradient(45deg, #F8F8F8, #FFFFFF)
-      }
-  }
-
-
-
-
-
-/* large mobile styles */
-@media screen and (min-width: 400px)
-{
-  .mobile-menu {
-    width: 350px;
-  }
-}
-/* tablet styles */
-@media screen and (min-width: 768px) {
   .header-text__desktop-button {
       display: none;
   }
@@ -482,72 +457,91 @@ p {
       flex-direction: row;
       width: 100%;    
   }
-}
-
-/* desktop styles */
-@media screen and (min-width: 1120px) {
-  body {
-      //max-width: 1600px;
-      margin: 0 auto; /* Center the container */
-      //width: 100%; /* Make sure it takes the full width of the viewport until it reaches 1600px */
-      display: grid;
-      grid-template-columns: 320px 1fr;
-      overflow-x: hidden;
-  }
-  .desktop-menu {
-    box-sizing: border-box;
-    width: 320px;
-    background: $hiddenMenuColor;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 20px;
-    
-    &__header {
-      display: flex; 
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 30px;
-    }
-    &__header-left {
-      display: flex;
-    }
-  }
-  .header-text {
-      display: flex;
-      flex-direction: row; 
-      overflow-x: hidden;
-      justify-content: space-between;
-      width: 100%; 
-     
-      &__desktop-button {
-        display: block;
-        display: flex;
-        align-items: center; 
-        padding: 10px; 
-    }
-      &__desktop-button img {
-        padding-right: 10px;
-  }
+    .header-brands {
+        border-top: 1px solid #D9FFF5;
+        padding: 1rem 1.5rem;
+        background: linear-gradient(45deg, #F8F8F8, #FFFFFF)
+      }
   }
 
-  h1 {
-      margin-right: auto;
-  }
-  div a {
-      padding-right: 10px;
-      text-decoration: none; /* Remove underline */
-      color: inherit; /* Inherit the text color from the parent element */
-      font-weight: 500;
-      font-size: 16px;
-      line-height: 24px;
-  }
+  /* Desktop screens */
+  @media (min-width: 1120px) {
+    .swiper {
+        display: none;
+    }
+    .header-brands {
+        border-top: 1px solid #D9FFF5;
+        padding: 1rem 1.5rem;
+        background: linear-gradient(45deg, #F8F8F8, #FFFFFF)
+      }
   
-  .site-nav__button site-nav__button--hidden {
-      display: none;
+  body {
+    //max-width: 1600px;
+    margin: 0 auto; /* Center the container */
+    //width: 100%; /* Make sure it takes the full width of the viewport until it reaches 1600px */
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    overflow-x: hidden;
+}
+.desktop-menu {
+  box-sizing: border-box;
+  width: 320px;
+  background: $hiddenMenuColor;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  
+  &__header {
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
   }
-  .site-nav {
-      display: none;
+  &__header-left {
+    display: flex;
   }
 }
+.header-text {
+    display: flex;
+    flex-direction: row; 
+    overflow-x: hidden;
+    justify-content: space-between;
+    width: 100%; 
+   
+    &__desktop-button {
+      display: block;
+      display: flex;
+      align-items: center; 
+      padding: 10px; 
+  }
+    &__desktop-button img {
+      padding-right: 10px;
+}
+}
+
+h1 {
+    margin-right: auto;
+}
+div a {
+    padding-right: 10px;
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit the text color from the parent element */
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.site-nav__button site-nav__button--hidden {
+    display: none;
+}
+.site-nav {
+    display: none;
+}
+}
+
+
+
+
+
