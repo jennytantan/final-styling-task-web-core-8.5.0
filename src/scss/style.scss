@@ -84,9 +84,9 @@ html, body {
   cursor: pointer;
 }
 .menu__item:hover {
-  opacity: 0.7; /* Slightly fades the item */
-  filter: brightness(0.9); /* Slightly darkens the item */
-  padding-left: 10px; /* Optional: Add padding on hover for visual effect */
+  opacity: 0.7; 
+  filter: brightness(0.9); 
+  padding-left: 10px; 
 }
 .menu__item:hover::before {
   content: '';
@@ -129,8 +129,8 @@ html, body {
   cursor: pointer;
 }
 .menu__contacts-mailto:hover {
-  opacity: 0.7; /* Slightly fades the item */
-  filter: brightness(0.9); /* Slightly darkens the item */
+  opacity: 0.7; 
+  filter: brightness(0.9);
 }
 .menu__contacts-phone {
   font-size: 24px;
@@ -142,8 +142,8 @@ html, body {
   cursor: pointer;
 }
 .menu__contacts-phone:hover {
-  opacity: 0.7; /* Slightly fades the item */
-  filter: brightness(0.9); /* Slightly darkens the item */
+  opacity: 0.7; 
+  filter: brightness(0.9); 
 }
 .menu__language-selector {
   display: flex;
@@ -165,8 +165,8 @@ html, body {
   cursor: pointer;
 }
 .menu__language:hover {
-  opacity: 0.7; /* Slightly fades the item */
-  filter: brightness(0.9); /* Slightly darkens the item */
+  opacity: 0.7; 
+  filter: brightness(0.9); 
 }
 .menu__language--active {
   color: #1B1C21;
@@ -184,7 +184,7 @@ html, body {
   position: fixed;
   top: 0;
   right: -470px; /* Start off-screen */
-  width: 450px; /* or your preferred width */
+  width: 450px; 
   max-width: 100%;
   height: 100vh;
   background-color: white;
@@ -196,7 +196,7 @@ html, body {
   z-index: 10;
 }
 
-/* Slide mobile menu in */
+// Slide mobile menu in //
 .mobile-menu-2.active,
 .mobile-menu-3.active {
   transform: translateX(-470px);
@@ -261,8 +261,8 @@ textarea::placeholder {
 }
 
 .main-content.menu-active {
-  opacity: 1; /* Adjust this value to your preference */
-  pointer-events: none; /* Prevents interaction with the main content when menu is open */
+  opacity: 1; 
+  pointer-events: none; 
 }
 
 .menu-backdrop {
@@ -271,7 +271,7 @@ textarea::placeholder {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 252, 252, 0.413); /* Adjust color and opacity as needed */
+  background-color: rgba(255, 252, 252, 0.413); 
   z-index: 0; /* Just below the mobile menu */
   opacity: 0;
   visibility: hidden;
@@ -284,11 +284,11 @@ textarea::placeholder {
 }
 
 .site-nav {
-  box-sizing: border-box; /* Include padding and borders in the element's width */
+  box-sizing: border-box; 
   display: flex;
   justify-content: space-between;
-  overflow-x: hidden;    /* Hides any horizontal overflow */
-  width: 100vw;           /* Full width of its container */
+  overflow-x: hidden;    
+  width: 100vw;          
   height: 88px; 
   background-color: #FFFFFF;
   border-bottom: 1px solid #D9FFF5;
@@ -300,9 +300,9 @@ textarea::placeholder {
   &__left {
     box-sizing: border-box;
     display: flex;
-    justify-content: space-around; /* or space-around, space-evenly */
-    align-items: center; /* Align items vertically in the center (optional) */
-    padding: 10px; /* Optional padding for the container */
+    justify-content: space-around; 
+    align-items: center; 
+    padding: 10px; 
   }
     
   &__left img {
@@ -312,9 +312,8 @@ textarea::placeholder {
   &__right-fixed {
     box-sizing: border-box;
     display: flex;
-    /*justify-content: space-around; */
-    align-items: center; /* Align items vertically in the center (optional) */
-    padding: 10px; /* Optional padding for the container */
+    align-items: center;
+    padding: 10px; 
   }
     
   &__right-fixed img {
@@ -323,9 +322,9 @@ textarea::placeholder {
   &__divider {
     box-sizing: border-box;
     display: flex;
-    justify-content: space-around; /* or space-around, space-evenly */
-    align-items: center; /* Align items vertically in the center (optional) */
-    padding: 10px; /* Optional padding for the container */
+    justify-content: space-around; 
+    align-items: center; 
+    padding: 10px; 
   }
 }
 
@@ -335,7 +334,7 @@ textarea::placeholder {
   width: 100vw; 
   
   h1 {
-    padding: 15px;
+    padding: 1.2rem;
   } 
   
   &__desktop-button div {
@@ -366,7 +365,7 @@ textarea::placeholder {
   &__button {
     display: block;
     text-align: center;
-    margin-left: 16px;
+    margin-left: 1.2rem;
     color: #7E7E82;
     font-size: 16px;
     font-weight: 500;
@@ -381,7 +380,6 @@ textarea::placeholder {
   &__button {
     background-color: #333;
     border: 2px solid transparent;
-
   }
   
   &__button:hover {
@@ -418,22 +416,19 @@ textarea::placeholder {
 
 .main-section {
   &__main-text {
-    box-sizing: border-box; /* Include padding and borders in the element's width */
+    box-sizing: border-box; 
     width: 100vw;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 1rem;
+    padding-left: 1.5rem;
   }
-  &__read-more-button {
-    padding: 10px;
+  &__main-image img {
+    width: 100%;           
+    height: auto;          
+    display: block;        
   }
   &__main-image {
     width: 100%;
-    overflow: hidden;
-  }
-  &__main-image img {
-    width: 100%;           /* Make the image take up 100% of the container's width */
-    height: auto;          /* Maintain the image's aspect ratio */
-    display: block;        /* Remove the bottom gap that may appear with inline images */
+    padding: 1rem;
   }
 }
 
@@ -443,6 +438,26 @@ p {
   line-height: 18px;  
 }
 
+.main-section__main-text p.hidden {
+  display: none;
+}
+
+.main-section__main-text p.visible {
+  display: block;
+}
+.main-section__read-more-button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.main-section__read-more-button img {
+  margin-right: 8px;
+}
+
+.main-section__read-more-button span {
+  font-weight: 500; 
+}
 //brands section//
 .header-brands {
   border-top: 1px solid #D9FFF5;
@@ -456,7 +471,7 @@ p {
   text-transform: uppercase;
   text-wrap: wrap;
 }
-/* Swiper variables */
+// Swiper variables //
 .swiper {
   width: 100%;
   height: 7rem;
@@ -499,13 +514,14 @@ p {
 /* Brand selector variables */
 .repair-brands {
     margin: 1.5rem;
-    max-width: 950px;
+    max-width: 1120px;
 }
 
 .repair-brands__wrapper {
     display: inline-flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 2rem;
+    row-gap: 1rem;
 }
 
 .repair-brands__expander {
@@ -535,12 +551,7 @@ p {
 .repair-brands__selector {
   transition: opacity 0.3s ease, max-height 0.3s ease;
   opacity: 1;
-  //max-height: 150px; /* Adjust this value based on your actual max height */
   overflow: hidden;
-}
-
-.repair-brands__selector img {
-  width: 224px;
 }
 
 .repair-brands__selector.hidden {
@@ -550,11 +561,86 @@ p {
 
 .repair-brands__selector.visible {
   opacity: 1;
-  max-height: 150px; /* Should match the value above */
+  width: 240px; 
 }
 
 .repair-brands__expander {
   transition: opacity 0.3s ease;
+}
+
+table {
+  border-collapse: collapse;
+  border-radius: 5px;
+  table-layout: fixed;
+  width: 100%;
+  background-color: #FFFFFF;
+}
+
+.table__content-wrapper {
+  margin: 1.5rem;
+  max-width: 1056px;
+}
+
+
+td {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+tr:nth-child(1) {
+  background-color: $bgColor;
+  color:#7E7E82;
+  ;
+}
+
+tr:nth-child(n+3) td {
+  border-top: 1px solid #EAEAEA;
+}
+
+td {
+  padding: 1rem;
+}
+
+.prices__description {
+  margin: 1.2rem;
+}
+
+.prices__description-button {
+  all: unset;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  cursor: pointer;
+  margin-top: 4rem;
+  min-width: 250px;
+}
+
+.prices__description-button-img {
+  padding-bottom: 1.1rem;
+}
+
+//main page footer//
+.page-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 1.2rem;
+  gap: 10rem;
+  margin-top: auto;
+  border-top: 1px solid #d9fff5;
+  color: #7E7E82;
+  font-size: 14px;
+}
+.page-footer__text-right {
+  text-align: right;
+}
+.page-footer__text {
+  max-width: 320px; 
+}
+.page-footer__text-copyright {
+  display: block;
 }
 
 /* large mobile styles minimum 400px */
@@ -567,6 +653,9 @@ p {
 
 @media screen and (min-width: 320px) and (max-width: 767px)
 {
+  .repair-brands {
+    display: none;
+}
   .mobile-menu-2,
   .mobile-menu-3 {
     box-sizing: border-box;
@@ -603,19 +692,25 @@ p {
   background: none;
   border: none;
 }
+
+.table__content {
+  display: none;
+}
 .page-footer {
-  padding: 16px;
-  border-top: 1px solid #d9fff5;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1rem;
 }
-}
-/* Mobile screens */
-@media (max-width: 767px) {
-    .repair-brands {
-        display: none;
-    }
+.page-footer__text {
+  max-width: 320px; 
+  text-align: center;
   }
+
+.page-footer__text-copyright {
+  display: block;
+}
+}
 
 /* Tablet screens */
 @media (min-width: 768px) {
@@ -689,8 +784,8 @@ p {
     display: grid;
     grid-template-columns: 320px minmax(800px, auto);
     width: 100vw !important;
-    //max-width: 1600px;
-    margin: 0 auto; /* Center the container */
+    max-width: 1600px;
+    margin: 0 auto; 
 }
 
 .desktop-menu {
@@ -707,6 +802,7 @@ p {
     display: flex; 
     align-items: center;
     justify-content: space-between;
+    margin-top: 15px;
     margin-bottom: 30px;
   }
   &__header-left {
@@ -734,10 +830,11 @@ p {
 h1 {
     margin-right: auto;
 }
-div a {
+.header-text__request,
+.header-text__status {
     padding-right: 10px;
-    text-decoration: none; /* Remove underline */
-    color: inherit; /* Inherit the text color from the parent element */
+    text-decoration: none; 
+    color: inherit; 
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
