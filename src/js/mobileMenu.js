@@ -10,22 +10,26 @@ export function initMobileMenus() {
   backdrop.classList.add('menu-backdrop');
   document.body.appendChild(backdrop);
 
+  function closeAllMenus() {
+    document.querySelectorAll('.mobile-menu, .mobile-menu-2, .mobile-menu-3').forEach(menu => {
+      menu.classList.remove('active');
+    });
+    mainContent.classList.remove('menu-active');
+    backdrop.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
   menuData.forEach(({ btnIds, menuClass }) => {
     const mobileMenu = document.querySelector(menuClass);
-    const closeBtn = mobileMenu ? mobileMenu.querySelector('.mobile-menu__close-btn') : null;
+    const closeBtn = mobileMenu ? mobileMenu.querySelector('.mobile-menu__close-btn, .feedback__close-btn') : null;
 
-    function toggleMenu() {
-      mobileMenu.classList.toggle('active');
-      mainContent.classList.toggle('menu-active');
-      backdrop.classList.toggle('active');
-      document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
-    }
-
-    function closeMenu() {
-      mobileMenu.classList.remove('active');
-      mainContent.classList.remove('menu-active');
-      backdrop.classList.remove('active');
-      document.body.style.overflow = '';
+    function toggleMenu(e) {
+      e.stopPropagation(); // Prevent event from bubbling up
+      closeAllMenus(); // Close any open menus first
+      mobileMenu.classList.add('active');
+      mainContent.classList.add('menu-active');
+      backdrop.classList.add('active');
+      document.body.style.overflow = 'hidden';
     }
 
     btnIds.forEach(btnId => {
@@ -39,7 +43,10 @@ export function initMobileMenus() {
     });
 
     if (closeBtn) {
-      closeBtn.addEventListener('click', closeMenu);
+      closeBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        closeAllMenus();
+      });
     }
 
     if (mobileMenu) {
@@ -51,12 +58,13 @@ export function initMobileMenus() {
     }
   });
 
-  backdrop.addEventListener('click', () => {
-    document.querySelectorAll('.mobile-menu.active').forEach(menu => {
-      menu.classList.remove('active');
-    });
-    mainContent.classList.remove('menu-active');
-    backdrop.classList.remove('active');
-    document.body.style.overflow = '';
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    const activeMenu = document.querySelector('.mobile-menu.active, .mobile-menu-2.active, .mobile-menu-3.active');
+    if (activeMenu && !activeMenu.contains(e.target) && !e.target.closest('[id^="btn"]')) {
+      closeAllMenus();
+    }
   });
+
+  backdrop.addEventListener('click', closeAllMenus);
 }

@@ -59,11 +59,9 @@ export function initBrandSelectors() {
       const isExpanded = expanderButton.getAttribute('data-expanded') === 'true';
       toggleVisibility(!isExpanded);
     });
-  });
 
-  window.addEventListener('resize', () => {
-    brandSelectorContainers.forEach((container, index) => {
-      const expanderButton = container.querySelector('.repair-brands__expander');
+    // Add resize event listener for each container
+    window.addEventListener('resize', () => {
       const isExpanded = expanderButton.getAttribute('data-expanded') === 'true';
       if (!isExpanded) {
         toggleVisibility(false);
