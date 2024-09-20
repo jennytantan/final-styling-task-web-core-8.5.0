@@ -252,15 +252,15 @@
   
   <div class="swiper swiper-categories mySwiper">
     <div class="swiper-wrapper">
-      <div class="swiper-slide brands-swiper__slide"><img src="./img/cat1.svg" alt="repair category 1"></div>
-      <div class="swiper-slide brands-swiper__slide"><img src="./img/cat2.svg" alt="repair category 2"></div>
-      <div class="swiper-slide brands-swiper__slide"><img src="./img/cat3.svg" alt="repair category 3"></div>
-      <div class="swiper-slide brands-swiper__slide"><img src="./img/cat1.svg" alt="repair category 4"></div>
-      <div class="swiper-slide brands-swiper__slide"><img src="./img/cat2.svg" alt="repair category 5"></div>
-      <div class="swiper-slide brands-swiper__slide"><img src="./img/cat3.svg" alt="repair category 6"></div>
-      <div class="swiper-slide brands-swiper__slide"><img src="./img/cat1.svg" alt="repair category 7"></div>
-      <div class="swiper-slide brands-swiper__slide"><img src="./img/cat2.svg" alt="repair category 8"></div>
-      <div class="swiper-slide brands-swiper__slide"><img src="./img/cat3.svg" alt="repair category 9"></div>
+      <div class="swiper-slide brands-swiper__slide slider--categories"><p>Laptop Repair</p><img src="./img/go.svg" alt="repair category 1"></div>
+      <div class="swiper-slide brands-swiper__slide slider--categories"><p>Repair</p><img src="./img/go.svg" alt="repair category 2"></div>
+      <div class="swiper-slide brands-swiper__slide slider--categories"><p>PC Repair</p><img src="./img/go.svg" alt="repair category 3"></div>
+      <div class="swiper-slide brands-swiper__slide slider--categories"><p>Laptop Repair</p><img src="./img/go.svg" alt="repair category 4"></div>
+      <div class="swiper-slide brands-swiper__slide slider--categories"><p>Tablet Repair</p><img src="./img/go.svg" alt="repair category 5"></div>
+      <div class="swiper-slide brands-swiper__slide slider--categories"><p>Repair</p><img src="./img/go.svg" alt="repair category 6"></div>
+      <div class="swiper-slide brands-swiper__slide slider--categories"><p>Laptop Repair</p><img src="./img/go.svg" alt="repair category 7"></div>
+      <div class="swiper-slide brands-swiper__slide slider--categories"><p>Tablet Repair</p><img src="./img/go.svg" alt="repair category 8"></div>
+      <div class="swiper-slide brands-swiper__slide slider--categories"><p>Repair</p><img src="./img/go.svg" alt="repair category 9"></div>
       <!-- ... other slides ... -->
     </div>
     <div class="swiper-pagination brands-swiper__pagination"></div>
@@ -268,14 +268,14 @@
 
   <div class="repair-brands">
     <div class="repair-brands__wrapper">
-      <div class="repair-brands__selector"><img src="./img/cat1.svg" alt="Brand 1"></div>
-      <div class="repair-brands__selector"><img src="./img/cat2.svg" alt="Brand 2"></div>
-      <div class="repair-brands__selector"><img src="./img/cat3.svg" alt="Brand 3"></div>
-      <div class="repair-brands__selector"><img src="./img/cat1.svg" alt="Brand 4"></div>
-      <div class="repair-brands__selector"><img src="./img/cat2.svg" alt="Brand 5"></div>
-      <div class="repair-brands__selector"><img src="./img/cat3.svg" alt="Brand 6"></div>
-      <div class="repair-brands__selector"><img src="./img/cat1.svg" alt="Brand 7"></div>
-      <div class="repair-brands__selector"><img src="./img/cat2.svg" alt="Brand 8"></div>
+      <div class="repair-brands__selector slider--categories-desktop"><p>Laptop Repair</p><img src="./img/go.svg" alt="repair category 1"></div>
+      <div class="repair-brands__selector slider--categories-desktop"><p>Repair</p><img src="./img/go.svg" alt="repair category 2"></div>
+      <div class="repair-brands__selector slider--categories-desktop"><p>PC Repair</p><img src="./img/go.svg" alt="repair category 3"></div>
+      <div class="repair-brands__selector slider--categories-desktop"><p>Laptop Repair</p><img src="./img/go.svg" alt="repair category 1"></div>
+      <div class="repair-brands__selector slider--categories-desktop"><p>Repair</p><img src="./img/go.svg" alt="repair category 2"></div>
+      <div class="repair-brands__selector slider--categories-desktop"><p>PC Repair</p><img src="./img/go.svg" alt="repair category 3"></div>
+      <div class="repair-brands__selector slider--categories-desktop"><p>Laptop Repair</p><img src="./img/go.svg" alt="repair category 1"></div>
+      <div class="repair-brands__selector slider--categories-desktop"><p>Repair</p><img src="./img/go.svg" alt="repair category 2"></div>
       <!-- ... other brand selectors ... -->
     </div>
     <div class="repair-brands__expander" id="expanderButton" data-expanded="false">
@@ -288,16 +288,41 @@
   <header class="header-brands prices">
     <div class="header-brands__text">service prices</div>
   </header>
-  <div class="swiper swiper-categories mySwiper">
+  <div class="swiper swiper-categories mySwiper selector__boxes-order">
     <div class="swiper-wrapper">
-      <div class="swiper-slide brands-swiper__slide"><img src="./img/prices.svg" alt="price 1"></div>
-      <div class="swiper-slide brands-swiper__slide"><img src="./img/prices.svg" alt="price 2"></div>
-      <div class="swiper-slide brands-swiper__slide"><img src="./img/prices.svg" alt="price 3"></div>
-      <div class="swiper-slide brands-swiper__slide"><img src="./img/prices.svg" alt="price 4"></div>
-      <div class="swiper-slide brands-swiper__slide"><img src="./img/prices.svg" alt="price 5"></div>
+      <div class="swiper-slide brands-swiper__slide prices__description-order">
+        <div><p><span>Repair Services</span><br>Testing with a technical report issuance</p></div>
+        <div><p><span>Price</span><br>Free</p></div>
+        <div><p><span>Time</span><br>30-120 min</p></div>
+        <img src="./img/order.svg" alt="price 1">
+      </div>
+      <div class="swiper-slide brands-swiper__slide prices__description-order">
+        <div><p><span>Repair Services</span><br>Testing with a technical report issuance</p></div>
+        <div><p><span>Price</span><br>$100</p></div>
+        <div><p><span>Time</span><br>30-120 min</p></div>
+        <img src="./img/order.svg" alt="price 2">
+      </div>      
+      <div class="swiper-slide brands-swiper__slide prices__description-order">
+        <div><p><span>Repair Services</span><br>Testing with a technical report issuance</p></div>
+        <div><p><span>Price</span><br>$100</p></div>
+        <div><p><span>Time</span><br>30-120 min</p></div>
+        <img src="./img/order.svg" alt="price 3">
+      </div>      
+      <div class="swiper-slide brands-swiper__slide prices__description-order">
+        <div><p><span>Repair Services</span><br>Testing with a technical report issuance</p></div>
+        <div><p><span>Price</span><br>$150</p></div>
+        <div><p><span>Time</span><br>30-120 min</p></div>
+        <img src="./img/order.svg" alt="price 4">
+      </div>      
+      <div class="swiper-slide brands-swiper__slide prices__description-order">
+        <div><p><span>Repair Services</span><br>Testing with a technical report issuance</p></div>
+        <div><p><span>Price</span><br>Negotiable</p></div>
+        <div><p><span>Time</span><br>30-120 min</p></div>
+        <img src="./img/order.svg" alt="price 5">
+      </div>
       <!-- ... other slides ... -->
     </div>
-    <div class="swiper-pagination brands-swiper__pagination"></div>
+    <div class="swiper-pagination brands-swiper__pagination prices-container__pagination"></div>
   </div>
 
   <div class="table__content-wrapper">
@@ -377,7 +402,7 @@
 
   </div>
 </div>
-  <script src="/dist/bundle.js"></script>
+  <script src="/bundle.js"></script>
 
   </body>
 </html>
