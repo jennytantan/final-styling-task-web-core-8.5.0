@@ -11,13 +11,20 @@
   </head>
 
   <body>
-   
+   <!-- Hidden anchors for menu targets -->
+   <a id="menu1"></a>
+   <a id="menu2"></a>
+   <a id="menu3"></a>
+
+   <!-- Menu backdrop -->
+   <div class="menu-backdrop"><a href="#"></a></div>
+
 <!--mobile menu visible on mobile with a maximum width: 1119px-->
     <aside class="mobile-menu mobile-menu-1">
       <div class="mobile-menu__top">
         <header class="mobile-menu__header">
           <div class="mobile-menu__header-left">
-            <button class="mobile-menu__close-btn"><img src="./img/button-close.svg" alt="close"></button>
+             <a href="#" class="mobile-menu__close-btn"><img src="./img/button-close.svg" alt="close"></a>
             <div class="mobile-menu__logo">
             <img src="./img/cps-logo.svg" alt="CPS Logo">
             </div>
@@ -60,7 +67,8 @@
   <!--top right menu for Submit A Request button-->
   <aside class="mobile-menu-2">
     <div class="feedback__header-wrapper">
-    <button class="mobile-menu__close-btn feedback__close-btn"><img src="./img/button-close.svg"></button>
+      <a href="#" class="mobile-menu__close-btn feedback__close-btn"><img src="./img/button-close.svg" alt="close"></a>
+    <!--<button class="mobile-menu__close-btn feedback__close-btn"><img src="./img/button-close.svg"></button>-->
       <div class="feedback__header">
         <h2>Feedback</h2>
       </div>
@@ -82,7 +90,8 @@
 
 <!--top right menu for Repair status button-->
 <aside class="mobile-menu-3">
-  <button class="mobile-menu__close-btn feedback__close-btn"><img src="./img/button-close.svg"></button>
+  <a href="#" class="mobile-menu__close-btn feedback__close-btn"><img src="./img/button-close.svg" alt="close"></a>
+  <!--<button class="mobile-menu__close-btn feedback__close-btn"><img src="./img/button-close.svg"></button>-->
   <div class="feedback__header">
     <h2>Order Call</h2>
   </div>
@@ -141,7 +150,7 @@
   <div class="main-content">
     <div class="site-nav">
       <div class="site-nav__left">
-          <img id="btn1" class="site-nav__menu-button" src="./img/button-side-menu.svg" alt="Menu Button">
+        <a href="#menu1" id="btn1" class="site-nav__menu-button"><img src="./img/button-side-menu.svg" alt="Menu Button"></a>
           <div class="site-nav__divider--mobile-hide">
               <img src="./img/divider.svg" alt="Divider">
           </div>
@@ -157,8 +166,8 @@
           <div class="site-nav__divider">
               <img src="./img/divider.svg" alt="Divider">
           </div>
-          <img id="btn2" class="site-nav__button" src="./img/button-repair.svg">
-          <img id="btn3" class="site-nav__button" src="./img/button-check-status.svg">
+          <a href="#menu2" id="btn2" class="site-nav__button"><img src="./img/button-repair.svg" alt="Repair"></a>
+            <a href="#menu3" id="btn3" class="site-nav__button"><img src="./img/button-check-status.svg" alt="Check Status"></a>
       </div>
   </div>
 
@@ -166,13 +175,16 @@
       <img class="header-text__highlight" src="./img/header-highlight.svg" alt="Header Highlight">
       <h1 class="header-text__title">Services</h1>
       <div class="header-text__desktop-button">
-        <div id="btn4">
-          <a class="header-text__request" href="#request">Submit a Request</a>
-          <img class="header-text__button" src="./img/button-repair.svg" alt="Repair Button">
+        <div>
+          <a href="#menu2" id="btn4" class="header-text__request">
+            <img class="header-text__button" src="./img/button-repair.svg" alt="Repair Button">
+            <span> Submit a Request </span>
+          </a>  
         </div>
-        <div id="btn5">
-          <a class="header-text__status" href="#status">Repair Status</a>
-          <img class="header-text__button" src="./img/button-check-status.svg" alt="Check Status Button">
+        <div>
+          <a href="#menu3" id="btn5" class="header-text__status"><img class="header-text__button" src="./img/button-check-status.svg" alt="Check Status Button">
+            <span> Repair Status </span>
+          </a>
         </div>
       </div>
   </div>
@@ -189,14 +201,15 @@
   </div>
 
   <section class="main-section">
-      <div class="main-section__main-text">
-          <p>We are an authorized service center for Dell equipment repair. Only with us can you repair your Dell laptop with the official manufacturer's warranty.</p>
-          <p>We have been operating successfully since 1992 and have earned a reputation as a reliable partner.</p>
-          <p>We take pride in the fact that people come to us based on recommendations and, in turn, recommend us to their family and friends.</p>
-          <div class="main-section__read-more-button">
-              <img src="./img/button-read-more.svg" alt="Read More">
-          </div>
+    <div class="main-section__main-text">
+      <p>We are an authorized service center for Dell equipment repair. Only with us can you repair your Dell laptop with the official manufacturer's warranty.</p>
+      <p>We have been operating successfully since 1992 and have earned a reputation as a reliable partner.</p>
+      <p>We take pride in the fact that people come to us based on recommendations and, in turn, recommend us to their family and friends.</p>
+      <div class="main-section__read-more-button">
+          <img src="./img/expand_show_all.svg" alt="Show All">
+          <span class="main-section__expander-text">Show All</span>
       </div>
+  </div>
 
       <div class="main-section__main-image">
           <img src="./img/company-logo-building.svg" alt="Company Logo on Building">
