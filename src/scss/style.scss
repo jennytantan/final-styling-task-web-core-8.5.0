@@ -512,6 +512,7 @@ p {
   transform: translateY(-20px);
 }
 
+/*
 .swiper-pagination-bullet-active {
   background-color: #b5b6bc;
   height: 12px;
@@ -523,6 +524,7 @@ p {
   height: 12px;
   width: 12px;
 }
+*/  
 
 /* Brand selector variables */
 .repair-brands,
@@ -1221,4 +1223,18 @@ content: "Hide";
   justify-content: center;
   align-items: center;
 }
+
+
+.swiper-pagination-bullet-active {
+  background-color: #b5b6bc;
+  height: 12px;
+  width: 12px;
+}
+
+.swiper-pagination-bullet {
+  background-color: #dddddd;
+  height: 12px;
+  width: 12px;
+}
+ 
 

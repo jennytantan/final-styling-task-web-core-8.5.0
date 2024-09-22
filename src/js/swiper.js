@@ -18,5 +18,13 @@ export function initSwiper() {
         enabled: false,
       },
     },
+    on: {
+      slideChange: function () {
+        this.pagination.render();
+        this.pagination.update();
+      },
+    },
   });
+
+  return swiper;
 }
