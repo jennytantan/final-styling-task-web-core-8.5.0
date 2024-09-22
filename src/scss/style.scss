@@ -121,6 +121,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 .menu__contacts a {
   font-size: 16px;
@@ -254,6 +255,7 @@ textarea::placeholder {
 .feedback__button-btn {
   background: none;
   border: none;
+  cursor: pointer;
 }
 
 //fade main content when mobile menu is active//
@@ -330,6 +332,9 @@ textarea::placeholder {
     justify-content: space-around;
     align-items: center;
     padding: 0.1rem;
+  }
+  &__button--hidden {
+    cursor: pointer;
   }
 }
 
@@ -520,18 +525,12 @@ p {
 }
 
 /* Brand selector variables */
-.repair-brands {
+.repair-brands,
+.repair-categories {
   margin: 1.5rem;
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
-}
-
-.repair-brands__wrapper {
-  display: inline-flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  row-gap: 1rem;
 }
 
 .repair-brands__expander {
@@ -543,27 +542,13 @@ p {
   padding-right: 0.5rem;
 }
 
-.repair-brands__expander-text {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-  color: black;
-  text-align: center;
-  cursor: pointer;
-  display: inline-block;
-  padding: 0;
-  margin: 0;
-  border: none;
-  background-color: transparent;
-  text-decoration: none;
-}
-
 .repair-brands__selector {
   transition:
     opacity 0.3s ease,
     max-height 0.3s ease;
   opacity: 1;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .repair-brands__selector.hidden {
@@ -610,6 +595,10 @@ tr:nth-child(n + 3) td {
 
 td {
   padding: 1rem;
+}
+
+.button__order-btn {
+  cursor: pointer;
 }
 
 .prices__description {
@@ -764,7 +753,6 @@ td {
   transform: rotate(180deg);
 }
 
-
 /* Menu backdrop */
 .menu-backdrop {
   position: fixed;
@@ -886,7 +874,7 @@ can’t click, hover, or interact with it while one of the menu items is active 
     opacity: 1;
     transition: max-height 0.5s ease, visibility 0s, opacity 0.5s ease;
   }
-  
+
   .main-section__read-more-button {
     cursor: pointer;
   }
@@ -902,6 +890,7 @@ can’t click, hover, or interact with it while one of the menu items is active 
   .expander-checkbox-2:checked ~ .main-section__read-more-button img {
     transform: rotate(180deg);
   }
+
 }
 
 /* large mobile styles minimum 400px */
@@ -912,7 +901,8 @@ can’t click, hover, or interact with it while one of the menu items is active 
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
-  .repair-brands {
+  .repair-brands,
+  .repair-categories {
     display: none;
   }
   .mobile-menu-2,
@@ -1050,6 +1040,90 @@ can’t click, hover, or interact with it while one of the menu items is active 
     }
   }
   
+  /* show and hide repair brands section on tablets */
+  .repair-brands__wrapper {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+    row-gap: 1rem;
+    max-height: 170px;
+    overflow: hidden;
+    transition: max-height 0.5s ease, visibility 0s 0.5s, opacity 0.5s ease;
+  }
+
+  .repair-brands__selector-img {
+    max-width: 100%;
+  }
+
+  /* When the checkbox is checked, expand to full height */
+.expander-checkbox__repair-brands:checked ~ .repair-brands__wrapper {
+  max-height: 500px; /* Set to auto for full height */
+  transition: max-height 0.5s ease, visibility 0s 0.5s, opacity 0.5s ease;
+}
+
+.repair-brands__expander {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+.repair-brands__expander img {
+  transition: transform 0.3s ease;
+}
+.expander-checkbox__repair-brands:checked ~ .repair-brands__expander img {
+  transform: rotate(180deg);
+}
+
+.repair-brands__expander-text::before {
+  content: "Show All";
+}
+
+.expander-checkbox__repair-brands:checked ~ .repair-brands__expander .repair-brands__expander-text::before {
+  content: "Hide";
+}
+/* show and hide repair categories section on tablets*/
+.repair-categories__wrapper {
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3%;
+  row-gap: 1rem;
+  max-height: 170px;
+  overflow: hidden;
+  transition: max-height 0.5s ease, visibility 0s 0.5s, opacity 0.5s ease;
+}
+
+.repair-categories__selector-img {
+  max-width: 100%;
+  cursor: pointer;
+}
+
+.expander-checkbox__repair-categories:checked ~ .repair-categories__wrapper {
+max-height: 600px; 
+transition: max-height 0.5s ease, visibility 0s 0.5s, opacity 0.5s ease;
+}
+
+.repair-categories__expander {
+cursor: pointer;
+display: flex;
+align-items: center;
+margin-top: 10px;
+}
+.repair-categories__expander img {
+transition: transform 0.3s ease;
+}
+.expander-checkbox__repair-categories:checked ~ .repair-categories__expander img {
+transform: rotate(180deg);
+}
+
+.repair-categories__expander-text::before {
+content: "Show All";
+}
+
+.expander-checkbox__repair-categories:checked ~ .repair-categories__expander .repair-categories__expander-text::before {
+content: "Hide";
+}
 }
 
 
@@ -1093,6 +1167,9 @@ can’t click, hover, or interact with it while one of the menu items is active 
     &__header-left {
       display: flex;
     }
+    &__header-right img {
+      cursor: pointer;
+    }
   }
   .header-text {
     display: flex;
@@ -1125,11 +1202,15 @@ can’t click, hover, or interact with it while one of the menu items is active 
     line-height: 24px;
   }
 
-  .site-nav__button site-nav__button--hidden {
+  .site-nav__button .site-nav__button--hidden {
     display: none;
   }
   .site-nav {
     display: none;
+  }
+
+  .repair-brands__selector-img {
+    max-width: 240px;
   }
 }
 
@@ -1140,3 +1221,4 @@ can’t click, hover, or interact with it while one of the menu items is active 
   justify-content: center;
   align-items: center;
 }
+
