@@ -3,5 +3,6 @@ import { initSwiper } from './swiper';
 import '../scss/style.scss';
 
 document.addEventListener('DOMContentLoaded', () => {
-  initSwiper();
+  const swiperInstances = initSwiper();
+  // You can use swiperInstances here if needed
 });

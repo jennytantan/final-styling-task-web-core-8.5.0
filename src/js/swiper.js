@@ -4,7 +4,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 export function initSwiper() {
-  new Swiper(".mySwiper", {
+  const swiperConfig = {
     modules: [Pagination],
     slidesPerView: "auto",
     spaceBetween: 20,
@@ -18,13 +18,33 @@ export function initSwiper() {
         enabled: false,
       },
     },
-    on: {
-      slideChange: function () {
-        this.pagination.render();
-        this.pagination.update();
+  };
+
+  // Initialize all Swiper instances
+  const swiperInstances = Array.from(document.querySelectorAll('.mySwiper')).map((element, index) => {
+    // Create a unique class for each Swiper instance
+    const uniqueClass = `mySwiper-${index}`;
+    element.classList.add(uniqueClass);
+
+    // Create a copy of the config and update the pagination element
+    const config = { ...swiperConfig };
+    config.pagination.el = `.${uniqueClass} .swiper-pagination`;
+
+    // Initialize Swiper
+    return new Swiper(`.${uniqueClass}`, {
+      ...config,
+      on: {
+        init: function () {
+          this.pagination.render();
+          this.pagination.update();
+        },
+        slideChange: function () {
+          this.pagination.render();
+          this.pagination.update();
+        },
       },
-    },
+    });
   });
 
-  return swiper;
+  return swiperInstances;
 }
