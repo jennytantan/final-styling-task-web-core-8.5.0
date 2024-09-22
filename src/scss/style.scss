@@ -729,7 +729,41 @@ td {
 }
 
 /*animations*/
-/* Existing styles... */
+.main-section__main-text--tablet {
+  display: none;
+}
+
+.main-section__main-text--paragraph-2-3 {
+  max-height: 0;
+  visibility: hidden;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, visibility 0s 0.5s, opacity 0.5s ease;
+}
+
+.expander-checkbox-1:checked ~ .main-section__main-text--paragraph-2-3 {
+  max-height: 100vh;
+  visibility: visible;
+  opacity: 1;
+  transition: max-height 0.5s ease, visibility 0s, opacity 0.5s ease;
+}
+
+.main-section__read-more-button {
+  cursor: pointer;
+}
+
+.expander-checkbox-1:checked ~ .main-section__read-more-button .main-section__expander-text::before {
+  content: "Read less";
+}
+
+.expander-checkbox-1 ~ .main-section__read-more-button .main-section__expander-text::before {
+  content: "Read more";
+}
+
+.expander-checkbox-1:checked ~ .main-section__read-more-button img {
+  transform: rotate(180deg);
+}
+
 
 /* Menu backdrop */
 .menu-backdrop {
@@ -807,7 +841,7 @@ can’t click, hover, or interact with it while one of the menu items is active 
 /* Close button positioning */
 .mobile-menu__close-btn {
   position: absolute;
-  top: 1.5rem;
+  top: 1.6rem;
   left: 1.5rem;
 }
 
@@ -828,6 +862,45 @@ can’t click, hover, or interact with it while one of the menu items is active 
   #menu2:target ~ .mobile-menu-2,
   #menu3:target ~ .mobile-menu-3 {
     transform: translateX(-520px);
+  }
+
+  .main-section__main-text--mobile {
+    display: none;
+  }
+
+  .main-section__main-text--tablet {
+    display: block;
+  }
+
+  .main-section__main-text--paragraph-3 {
+    max-height: 0;
+    visibility: hidden;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, visibility 0s 0.5s, opacity 0.5s ease;
+  }
+  
+  .expander-checkbox-2:checked ~ .main-section__main-text--paragraph-3 {
+    max-height: 100vh;
+    visibility: visible;
+    opacity: 1;
+    transition: max-height 0.5s ease, visibility 0s, opacity 0.5s ease;
+  }
+  
+  .main-section__read-more-button {
+    cursor: pointer;
+  }
+  
+  .expander-checkbox-2:checked ~ .main-section__read-more-button .main-section__expander-text::before {
+    content: "Read less";
+  }
+  
+  .expander-checkbox-2 ~ .main-section__read-more-button .main-section__expander-text::before {
+    content: "Read more";
+  }
+  
+  .expander-checkbox-2:checked ~ .main-section__read-more-button img {
+    transform: rotate(180deg);
   }
 }
 
@@ -905,6 +978,7 @@ can’t click, hover, or interact with it while one of the menu items is active 
   padding-top: 1.5rem;
 }
 
+
 /* Tablet screens */
 @media (min-width: 768px) {
   .page-footer {
@@ -975,7 +1049,10 @@ can’t click, hover, or interact with it while one of the menu items is active 
       box-sizing: border-box;
     }
   }
+  
 }
+
+
 
 /* Desktop screens */
 @media (min-width: 1120px) {
@@ -1063,5 +1140,3 @@ can’t click, hover, or interact with it while one of the menu items is active 
   justify-content: center;
   align-items: center;
 }
-
-

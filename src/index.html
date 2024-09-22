@@ -201,19 +201,47 @@
   </div>
 
   <section class="main-section">
-    <div class="main-section__main-text">
-      <p>We are an authorized service center for Dell equipment repair. Only with us can you repair your Dell laptop with the official manufacturer's warranty.</p>
-      <p>We have been operating successfully since 1992 and have earned a reputation as a reliable partner.</p>
-      <p>We take pride in the fact that people come to us based on recommendations and, in turn, recommend us to their family and friends.</p>
-      <div class="main-section__read-more-button">
-          <img src="./img/expand_show_all.svg" alt="Show All">
-          <span class="main-section__expander-text">Show All</span>
+    <!--main text for 320px screens-->
+    <div class="main-section__main-text main-section__main-text--mobile">
+      <div class="main-section__main-text--paragraph-1">
+        <p>We are an authorized service center for Dell equipment repair. Only with us can you repair your Dell laptop with the official manufacturer's warranty.</p>
       </div>
-  </div>
+
+      <input id="expander-checkbox-1" type="checkbox" class="expander-checkbox-1" hidden>
+
+      <div class="main-section__main-text--paragraph-2-3">
+        <p>We have been operating successfully since 1992 and have earned a reputation as a reliable partner.</p>
+        <p>We take pride in the fact that people come to us based on recommendations and, in turn, recommend us to their family and friends.</p>
+      </div>
+
+      <label for="expander-checkbox-1" class="main-section__read-more-button main-section__expander-mobile">
+        <img class="expander-checkbox-1__img" src="./img/expand_show_all.svg" alt="Show All">
+        <span class="main-section__expander-text"></span>
+      </label>
+    </div>  
+
+    <!--main text for 768px screens-->
+    <div class="main-section__main-text main-section__main-text--tablet">
+      <div class="main-section__main-text--paragraph-1-2">
+        <p>We are an authorized service center for Dell equipment repair. Only with us can you repair your Dell laptop with the official manufacturer's warranty.</p>
+        <p>We have been operating successfully since 1992 and have earned a reputation as a reliable partner.</p>
+      </div>
+
+      <input id="expander-checkbox-2" type="checkbox" class="expander-checkbox-2" hidden>
+       
+        <div class="main-section__main-text--paragraph-3">
+        <p>We take pride in the fact that people come to us based on recommendations and, in turn, recommend us to their family and friends.</p>
+        </div>
+                  <!--test button for 768px and larger screens-->   
+                  <label for="expander-checkbox-2" class="main-section__read-more-button main-section__expander-tablet">
+                    <img src="./img/expand_show_all.svg" alt="Show All">
+                    <span class="main-section__expander-text"></span>
+      </div>
 
       <div class="main-section__main-image">
           <img src="./img/company-logo-building.svg" alt="Company Logo on Building">
       </div>
+
   </section>
 
   <header class="header-brands">
